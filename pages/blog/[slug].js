@@ -44,23 +44,6 @@ export default function Post({ title, date, content }) {
         <div className="w-full mt-4 prose dark:prose-dark max-w-none">
           <MDXRemote {...content} />
         </div>
-        <div className="text-sm text-gray-700 dark:text-gray-300">
-          {/* <a
-            href={discussUrl(post.slug)}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {'Discuss on Twitter'}
-          </a>
-          {` • `}
-          <a
-            href={editUrl(post.slug)}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {'Edit on GitHub'}
-          </a> */}
-        </div>
       </article>
       <div>
         <div>{format(parseISO(date), 'MMMM do, uuu')}</div>
