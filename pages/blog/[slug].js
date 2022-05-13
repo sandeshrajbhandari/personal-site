@@ -17,7 +17,7 @@ export default function Post({ title, date, content }) {
       date={new Date(date).toISOString()}
       type="article"
     >
-      <article className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
+      <article className="flex flex-col items-start justify-center w-full customMaxWidth mx-auto mb-16">
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
           {title}
         </h1>
@@ -62,7 +62,7 @@ export async function getStaticProps(context) {
     //props: blogPosts.find((item) => item.slug===params.slug), // will be passed to the page component as props
     props: {
       ...data,
-      date: data.date.toISOString(),
+      date: data.date,
       content: mdxSource
     }
   };
