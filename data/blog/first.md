@@ -1,11 +1,14 @@
 ---
 title: Hello Post
-date: 2022-01-21T06:07:23.929Z
----
-
+date: '2020-08-09'
+summary: 'test post for dev env.'
+image: '/static/images/backend/og.png'
 ---
 
 **Advertisement :)**
+
+I'm a mechanical engineer, developer, and creator. I write about web dev on my site, build projects, and dabble in 3D design and photography in my free time.
+Almost before we knew it,
 
 - **[pica](https://nodeca.github.io/pica/demo/)** - high quality and fast image
   resize in browser.

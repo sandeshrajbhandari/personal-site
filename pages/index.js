@@ -1,23 +1,31 @@
 import Head from 'next/head';
 // import { blogPosts } from '../lib/data'
 import Link from 'next/link';
-import { format, parseISO, add } from 'date-fns';
 import { getAllPosts } from '../lib/data';
 import Image from 'next/image';
 import Container from '../components/Container';
+import BlogPost from '../components/BlogPost';
+
+import { format, parseISO, add } from 'date-fns';
 
 export default function Home({ posts }) {
   return (
     <Container>
-      <div className="flex flex-col w-8/12 mx-auto justify-around items-around max-w-2xl">
-        <div className="flex flex-row justify-between pb-4">
-          <div>
-            <h1 className="font-bold text-3xl dark:text-white">
-              Sandesh Rajbhandari
+      <div className="flex flex-col justify-around items-around customMaxWidth  mx-auto">
+        {/* max-w-2xl determines the actual width of the content here. */}
+        <div className="flex flex-col-reverse sm:flex-row justify-between pb-4">
+          <div className="flex-1 pr-8">
+            <h1 className="font-bold text-4xl text-teal-600 dark:text-white">
+              Hi, I'm Sandesh. 👋
             </h1>
-            <h2 className="text-gray-700 dark:text-gray-200 mb-4">
+            <h2 className="text-gray-700 text-xl dark:text-gray-200 mb-4">
               Engineer, Creator
             </h2>
+            <p className="text-lg dark:text-white">
+              I'm a mechanical engineer, developer, and creator. I write about
+              web dev on my site, build projects, and dabble in 3D design and
+              photography in my free time.
+            </p>
           </div>
           <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0">
             <Image
@@ -30,41 +38,37 @@ export default function Home({ posts }) {
             />
           </div>
         </div>
-        {posts.map((post) => (
-          <BlogItem key={post.title} {...post} />
-        ))}
-      </div>
-      {/* <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16 ">
-        <div className="flex flex-col-reverse sm:flex-row items-start">
-          <div className="flex flex-col pr-8">
-            <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
-              Sandesh Rajbhandari
-            </h1>
-            <h2 className="text-gray-700 dark:text-gray-200 mb-4">
-              Engineer, Creator
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-16">
-              Learning Web Dev and documenting my journey.
-            </p>
-          </div>
-          <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">
-            <Image
-              alt="Sandesh Rajbhandari"
-              height={176}
-              width={176}
-              //public folder
-              src="/avatar.jpg"
-              className="rounded-full filter grayscale"
-            />
-          </div>
+        <div className="flex flex-col mx-auto w-full max-w-2xl">
+          <h1 className="text-4xl font-extrabold pb-5 dark:text-white">
+            Latest Articles
+          </h1>
+          {posts.map((post) => (
+            <BlogPost key={post.title} {...post} />
+          ))}
         </div>
-        {posts.map((post) => (
-          <BlogItem key={post.title} {...post} />
-        ))}
-      </div> */}
+      </div>
     </Container>
   );
 }
+
+// export async function getStaticProps() {
+//   const allPosts = getAllPosts();
+//   const sortedPosts = allPosts.sort(
+//     (a, b) => Number(new Date(b.data.date)) - Number(new Date(a.data.date))
+//   );
+//   console.log(sortedPosts);
+//   //const {data, content } = allPosts.find((item) => item.slug === params.slug) ;
+//   return {
+//     props: {
+//       posts: sortedPosts.map(({ data, content, slug }) => ({
+//         ...data,
+//         date: data.date.toISOString(),
+//         content,
+//         slug
+//       }))
+//     }
+//   };
+// }
 
 export async function getStaticProps() {
   const allPosts = getAllPosts();
@@ -77,44 +81,10 @@ export async function getStaticProps() {
     props: {
       posts: sortedPosts.map(({ data, content, slug }) => ({
         ...data,
-        date: data.date.toISOString(),
+        date: data.date,
         content,
         slug
       }))
     }
   };
-}
-
-function BlogItem({ slug, title, date }) {
-  return (
-    //   <div
-    //     className="border border-gray-100 shadow rounded p-4
-    // hover:shadow-md hover:border-gray-200 transition duration-200 ease-in"
-    //   >
-    //     <div>
-    //       <Link href={`/blog/${slug}`}>
-    //         <a className="font-bold">{title}</a>
-    //       </Link>
-    //     </div>
-    //     <div>{format(parseISO(date), 'MMMM do, uuu')}</div>
-    //   </div>
-    <Link href={`/blog/${slug}`}>
-      <a className="w-full">
-        <div className="w-full mb-8">
-          <div className="flex flex-col justify-between md:flex-row">
-            <h4 className="w-full mb-2 text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100">
-              {title}
-            </h4>
-            {/* <p className="w-32 mb-4 text-left text-gray-500 md:text-right md:mb-0">
-              {`${views ? new Number(views).toLocaleString() : '–––'} views`}
-            </p> */}
-          </div>
-          <div className="text-gray-600 dark:text-gray-400 text-sm">
-            {format(parseISO(date), 'MMMM do, uuu')}
-          </div>
-          {/* <p className="text-gray-600 dark:text-gray-400">{summary}</p> */}
-        </div>
-      </a>
-    </Link>
-  );
 }
