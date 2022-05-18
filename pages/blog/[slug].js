@@ -1,13 +1,14 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { getAllPosts } from '../../lib/data';
+import Tag from '../../components/Tag';
 import { format, parseISO, add } from 'date-fns';
 //import { data } from 'autoprefixer';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 import Container from '../../components/Container';
 
-export default function Post({ title, date, content }) {
+export default function Post({ title, date, content, tags }) {
   return (
     <Container
       title={`${title} – Sandesh Rajbhandari`}
@@ -21,7 +22,7 @@ export default function Post({ title, date, content }) {
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
           {title}
         </h1>
-        <div className="flex flex-col items-start justify-between w-full mt-2 md:flex-row md:items-center">
+        <div className="flex flex-col items-start space-y-2 justify-around w-full mt-2 ">
           <div className="flex items-center">
             <Image
               alt="Sandesh"
@@ -40,8 +41,14 @@ export default function Post({ title, date, content }) {
             {` • `}
             <ViewCounter slug={post.slug} />
           </p> */}
+          <div className="flex flex-wrap">
+            {tags.map((tag) => (
+              <Tag key={tag} text={tag} />
+            ))}
+          </div>
         </div>
-        <div className="w-full mt-4 prose dark:prose-dark max-w-none">
+
+        <div className="w-full prose dark:prose-dark max-w-none">
           <MDXRemote {...content} />
         </div>
       </article>

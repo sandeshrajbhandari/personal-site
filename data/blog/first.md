@@ -3,6 +3,7 @@ title: Hello Post
 date: '2020-08-09'
 summary: 'test post for dev env.'
 image: '/static/images/backend/og.png'
+tags: ['Knowledge Management', 'Web Dev', '3D Design']
 ---
 
 **Advertisement :)**

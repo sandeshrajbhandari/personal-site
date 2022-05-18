@@ -1,6 +1,6 @@
-import Container from "components/Container";
-import Tweet from "components/Tweet";
-import { getTweets } from "lib/twitter";
+import Container from '../components/Container';
+import Tweet from '../components/Tweet';
+import { getTweets } from '../lib/twitter';
 
 export default function Tweets({ tweets }) {
   return (
@@ -27,8 +27,9 @@ export default function Tweets({ tweets }) {
 
 export async function getStaticProps() {
   const tweets = await getTweets([
-    "1488096659070353413",
-    "1488151330547924994",
+    '1488096659070353413',
+    '1488151330547924994',
+    '1526796055890649088'
   ]);
 
   return { props: { tweets } };
