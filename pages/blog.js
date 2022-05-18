@@ -78,7 +78,7 @@ export default function Blog({ posts }) {
           </>
         )} */}
         <h3 className="mt-4 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white">
-          Latest Posts
+          All Posts
         </h3>
         {!filteredBlogPosts.length && (
           <p className="mb-4 text-gray-600 dark:text-gray-400">
