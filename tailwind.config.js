@@ -22,7 +22,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],
-        heading: ['TT Ramillas', 'Inter', ...fontFamily.sans]
+        serif: ['TT Ramillas', 'Inter', ...fontFamily.serif]
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -95,5 +95,5 @@ module.exports = {
   variants: {
     typography: ['dark']
   },
-  plugins: [require('@tailwindcss/typography')]
+  plugins: [require('@tailwindcss/typography'), require('tailwindcss-opentype')]
 };
