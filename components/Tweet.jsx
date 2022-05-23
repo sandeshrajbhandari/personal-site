@@ -1,4 +1,5 @@
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
+
 import { format } from 'date-fns';
 
 /**
@@ -35,7 +36,7 @@ export default function Tweet({
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
+          <ExportedImage
             alt={author.username}
             height={48}
             width={48}
@@ -95,7 +96,7 @@ export default function Tweet({
       {media && media.length ? (
         <div className="inline-grid grid-cols-2 gap-x-2 gap-y-2 my-2">
           {media.map((m) => (
-            <Image
+            <ExportedImage
               key={m.media_key}
               alt={text}
               height={m.height}

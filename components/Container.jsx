@@ -50,10 +50,13 @@ export default function Container(props) {
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`https://leerob.io${router.asPath}`} />
+        <meta
+          property="og:url"
+          content={`https://sandeshrajbhandari.com.np${router.asPath}`}
+        />
         <link
           rel="canonical"
-          href={`https:sandeshrajbhandari.com.np${router.asPath}`}
+          href={`https://sandeshrajbhandari.com.np${router.asPath}`}
         />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Sandesh Rajbhandari" />
@@ -61,7 +64,7 @@ export default function Container(props) {
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@sandesrb" />
+        <meta name="twitter:site" content="@sandesrajx" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import { getAllPosts } from '../../lib/data';
 import Tag from '../../components/Tag';
 import { format, parseISO, add } from 'date-fns';
@@ -24,7 +24,7 @@ export default function Post({ title, date, content, tags }) {
         </h1>
         <div className="flex flex-col items-start space-y-2 justify-around w-full mt-2 ">
           <div className="flex items-center">
-            <Image
+            <ExportedImage
               alt="Sandesh"
               height={24}
               width={24}

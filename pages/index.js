@@ -2,7 +2,8 @@ import Head from 'next/head';
 // import { blogPosts } from '../lib/data'
 import Link from 'next/link';
 import { getAllPosts } from '../lib/data';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
+
 import Container from '../components/Container';
 import BlogPost from '../components/BlogPost';
 
@@ -28,11 +29,12 @@ export default function Home({ posts }) {
             </p>
           </div>
           <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0">
-            <Image
+            <ExportedImage
               alt="Sandesh Rajbhandari"
               height={176}
               width={176}
               //public folder
+              unoptimized="true"
               src="/avatar.jpg"
               className="rounded-full filter grayscale"
             />
