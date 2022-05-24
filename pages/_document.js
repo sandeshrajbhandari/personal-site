@@ -48,7 +48,7 @@ export default function Document(props) {
         />
         <meta content="14d2e73487fa6c71" name="yandex-verification" />
         <meta
-          content="eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw"
+          content="eqcpzAXNhv5EyFYkG_d5gzyx6aKB_RzzqWWH35d0-VQ"
           name="google-site-verification"
         />
       </Head>
