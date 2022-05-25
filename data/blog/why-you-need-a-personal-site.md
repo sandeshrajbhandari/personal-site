@@ -3,7 +3,7 @@ title: Why you need a personal website - Hello World
 date: '2022-05-21'
 tags: ['next js', 'digital-garden', 'webdev']
 draft: false
-summary: 'A personal website won't make you rich or famous, but be a place to build in public and showcase projects for your portfolio.'
+summary: "A personal website won't make you rich or famous, but be a place to build in public and showcase projects for your portfolio"
 ---
 
 Ever since I started learning programming and web development, I wanted a site of my own. I dabbled with blogging in the past with wordpress and other solutions, but didn't feel the sense of ownership I wanted.
