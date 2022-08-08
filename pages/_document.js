@@ -46,9 +46,9 @@ export default function Document(props) {
           content="/static/favicons/browserconfig.xml"
           name="msapplication-config"
         />
-        <meta content="14d2e73487fa6c71" name="yandex-verification" />
+        <meta content="eec34463553d293d" name="yandex-verification" />
         <meta
-          content="eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw"
+          content="eqcpzAXNhv5EyFYkG_d5gzyx6aKB_RzzqWWH35d0-VQ"
           name="google-site-verification"
         />
       </Head>
