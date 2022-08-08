@@ -12,23 +12,23 @@ import { format, parseISO, add } from 'date-fns';
 export default function Home({ posts }) {
   return (
     <Container>
-      <div className="flex flex-col justify-around items-around customMaxWidth  mx-auto">
+      <div classNameName="flex flex-col justify-around items-around customMaxWidth  mx-auto">
         {/* max-w-2xl determines the actual width of the content here. */}
-        <div className="flex flex-col-reverse sm:flex-row justify-between pb-4">
-          <div className="flex-1 pr-8">
-            <h1 className="font-bold text-4xl text-teal-600 dark:text-white">
+        <div classNameName="flex flex-col-reverse sm:flex-row justify-between pb-4">
+          <div classNameName="flex-1 pr-8">
+            <h1 classNameName="font-bold text-4xl text-teal-600 dark:text-white">
               Hi, I'm Sandesh. 👋
             </h1>
-            <h2 className="text-gray-700 text-xl dark:text-gray-200 mb-4">
+            <h2 classNameName="text-gray-700 text-xl dark:text-gray-200 mb-4">
               Designer, Developer
             </h2>
-            <p className="text-lg dark:text-white">
+            <p classNameName="text-lg dark:text-white">
               I'm a <strong>photographer</strong> and <em>graphic designer</em>{' '}
               working with 3D art and CGI. Currently, I am learning to code
               websites and make useful web apps with functional design.
             </p>
           </div>
-          <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0">
+          <div classNameName="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0">
             <ExportedImage
               alt="Sandesh Rajbhandari"
               height={176}
@@ -36,57 +36,57 @@ export default function Home({ posts }) {
               //public folder
               unoptimized="true"
               src="/avatar.jpg"
-              className="rounded-full filter grayscale"
+              classNameName="rounded-full filter grayscale"
             />
           </div>
         </div>
-        <div className="flex flex-col mx-auto w-full max-w-2xl">
-          <h1 className="text-4xl font-extrabold pb-5 dark:text-white">
+        <div classNameName="flex flex-col mx-auto w-full max-w-2xl">
+          <h1 classNameName="text-4xl font-extrabold pb-5 dark:text-white">
             Latest Articles
           </h1>
           {posts.map((post) => (
             <BlogPost key={post.title} {...post} />
           ))}
         </div>
-        <div className="flex flex-col mx-auto w-full max-w-2xl">
-          <h1 className="text-4xl font-extrabold pb-5 dark:text-white">
+        <div classNameName="flex flex-col mx-auto w-full max-w-2xl">
+          <h1 classNameName="text-4xl font-extrabold pb-5 dark:text-white">
             Photography
           </h1>
-          <section class="overflow-hidden text-gray-700 ">
-            <div class="">
-              <div class="flex flex-wrap -m-1 md:-m-2">
-                <div class="flex flex-wrap w-1/2">
-                  <div class="w-full p-1 md:p-2">
+          <section className="overflow-hidden text-gray-700 ">
+            <div className="">
+              <div className="flex flex-wrap -m-1 md:-m-2">
+                <div className="flex flex-wrap w-1/2">
+                  <div className="w-full p-1 md:p-2">
                     <img
                       alt="gallery"
-                      class="block object-cover object-center w-full h-full rounded-lg"
+                      className="block object-cover object-center w-full h-full rounded-lg"
                       src="https://i.imgur.com/DLvisXX.jpg"
                     />
                   </div>
                 </div>
-                <div class="flex flex-wrap w-1/2">
-                  <div class="w-full p-1 md:p-2">
+                <div className="flex flex-wrap w-1/2">
+                  <div className="w-full p-1 md:p-2">
                     <img
                       alt="gallery"
-                      class="block object-cover object-center w-full h-full rounded-lg"
+                      className="block object-cover object-center w-full h-full rounded-lg"
                       src="https://i.imgur.com/QwbSY4x.jpg"
                     />
                   </div>
                 </div>
-                <div class="flex flex-wrap w-1/2">
-                  <div class="w-full p-1 md:p-2">
+                <div className="flex flex-wrap w-1/2">
+                  <div className="w-full p-1 md:p-2">
                     <img
                       alt="gallery"
-                      class="block object-cover object-center w-full h-full rounded-lg"
+                      className="block object-cover object-center w-full h-full rounded-lg"
                       src="https://i.imgur.com/11Hanbs.jpg"
                     />
                   </div>
                 </div>
-                <div class="flex flex-wrap w-1/2">
-                  <div class="w-full p-1 md:p-2">
+                <div className="flex flex-wrap w-1/2">
+                  <div className="w-full p-1 md:p-2">
                     <img
                       alt="gallery"
-                      class="block object-cover object-center w-full h-full rounded-lg"
+                      className="block object-cover object-center w-full h-full rounded-lg"
                       src="https://i.imgur.com/88H0TBw.jpg"
                     />
                   </div>
@@ -95,54 +95,54 @@ export default function Home({ posts }) {
             </div>
           </section>
 
-          <h1 className="text-4xl font-extrabold pt-4 pb-5 dark:text-white">
+          <h1 classNameName="text-4xl font-extrabold pt-4 pb-5 dark:text-white">
             3D Design
           </h1>
-          <section class="overflow-hidden pb-4 text-gray-700 ">
-            <div class="">
-              <div class="flex flex-wrap -m-1 md:-m-2">
-                <div class="flex flex-wrap w-1/3">
-                  <div class="w-full p-1 md:p-2">
+          <section className="overflow-hidden pb-4 text-gray-700 ">
+            <div className="">
+              <div className="flex flex-wrap -m-1 md:-m-2">
+                <div className="flex flex-wrap w-1/3">
+                  <div className="w-full p-1 md:p-2">
                     <img
                       alt="gallery"
-                      class="block object-cover object-center w-full h-full rounded-lg"
+                      className="block object-cover object-center w-full h-full rounded-lg"
                       src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/a3789e126162197.6129bed3874f3.png"
                     />
                   </div>
                 </div>
-                <div class="flex flex-wrap w-1/3">
-                  <div class="w-full p-1 md:p-2">
+                <div className="flex flex-wrap w-1/3">
+                  <div className="w-full p-1 md:p-2">
                     <img
                       alt="gallery"
-                      class="block object-cover object-center w-full h-full rounded-lg"
+                      className="block object-cover object-center w-full h-full rounded-lg"
                       src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/41afe9126162197.6127a8498950e.png"
                     />
                   </div>
                 </div>
-                <div class="flex flex-wrap w-1/3">
-                  <div class="w-full p-1 md:p-2">
+                <div className="flex flex-wrap w-1/3">
+                  <div className="w-full p-1 md:p-2">
                     <img
                       alt="gallery"
-                      class="block object-cover object-center w-full h-full rounded-lg"
+                      className="block object-cover object-center w-full h-full rounded-lg"
                       src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/95c7a2126162197.6127a8498a637.png"
                     />
                   </div>
                 </div>
 
-                <div class="flex flex-wrap w-1/3">
-                  <div class="w-full p-1 md:p-2">
+                <div className="flex flex-wrap w-1/3">
+                  <div className="w-full p-1 md:p-2">
                     <img
                       alt="gallery"
-                      class="block object-cover object-center w-full h-full rounded-lg"
+                      className="block object-cover object-center w-full h-full rounded-lg"
                       src="https://i.imgur.com/KuTDvUx.jpg"
                     />
                   </div>
                 </div>
-                <div class="flex flex-wrap w-1/3">
-                  <div class="w-full p-1 md:p-2">
+                <div className="flex flex-wrap w-1/3">
+                  <div className="w-full p-1 md:p-2">
                     <img
                       alt="gallery"
-                      class="block object-cover object-center w-full h-full rounded-lg"
+                      className="block object-cover object-center w-full h-full rounded-lg"
                       src="https://i.imgur.com/18vJHO6.jpg"
                     />
                   </div>
