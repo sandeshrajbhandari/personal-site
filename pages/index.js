@@ -12,23 +12,23 @@ import { format, parseISO, add } from 'date-fns';
 export default function Home({ posts }) {
   return (
     <Container>
-      <div classNameName="flex flex-col justify-around items-around customMaxWidth  mx-auto">
+      <div className="flex flex-col justify-around items-around customMaxWidth  mx-auto">
         {/* max-w-2xl determines the actual width of the content here. */}
-        <div classNameName="flex flex-col-reverse sm:flex-row justify-between pb-4">
-          <div classNameName="flex-1 pr-8">
-            <h1 classNameName="font-bold text-4xl text-teal-600 dark:text-white">
+        <div className="flex flex-col-reverse sm:flex-row justify-between pb-4">
+          <div className="flex-1 pr-8">
+            <h1 className="font-bold text-4xl text-teal-600 dark:text-white">
               Hi, I'm Sandesh. 👋
             </h1>
-            <h2 classNameName="text-gray-700 text-xl dark:text-gray-200 mb-4">
+            <h2 className="text-gray-700 text-xl dark:text-gray-200 mb-4">
               Designer, Developer
             </h2>
-            <p classNameName="text-lg dark:text-white">
-              I'm a <strong>photographer</strong> and <em>graphic designer</em>{' '}
+            <p className="text-lg dark:text-white">
+              I'm a <strong>photographer</strong> and <em>graphic designer</em>
               working with 3D art and CGI. Currently, I am learning to code
               websites and make useful web apps with functional design.
             </p>
           </div>
-          <div classNameName="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0">
+          <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0">
             <ExportedImage
               alt="Sandesh Rajbhandari"
               height={176}
@@ -36,20 +36,20 @@ export default function Home({ posts }) {
               //public folder
               unoptimized="true"
               src="/avatar.jpg"
-              classNameName="rounded-full filter grayscale"
+              className="rounded-full filter grayscale"
             />
           </div>
         </div>
-        <div classNameName="flex flex-col mx-auto w-full max-w-2xl">
-          <h1 classNameName="text-4xl font-extrabold pb-5 dark:text-white">
+        <div className="flex flex-col mx-auto w-full max-w-2xl">
+          <h1 className="text-4xl font-extrabold pb-5 dark:text-white">
             Latest Articles
           </h1>
           {posts.map((post) => (
             <BlogPost key={post.title} {...post} />
           ))}
         </div>
-        <div classNameName="flex flex-col mx-auto w-full max-w-2xl">
-          <h1 classNameName="text-4xl font-extrabold pb-5 dark:text-white">
+        <div className="flex flex-col mx-auto w-full max-w-2xl">
+          <h1 className="text-4xl font-extrabold pb-5 dark:text-white">
             Photography
           </h1>
           <section className="overflow-hidden text-gray-700 ">
@@ -95,7 +95,7 @@ export default function Home({ posts }) {
             </div>
           </section>
 
-          <h1 classNameName="text-4xl font-extrabold pt-4 pb-5 dark:text-white">
+          <h1 className="text-4xl font-extrabold pt-4 pb-5 dark:text-white">
             3D Design
           </h1>
           <section className="overflow-hidden pb-4 text-gray-700 ">
