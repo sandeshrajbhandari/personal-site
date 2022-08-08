@@ -32,4 +32,4 @@ As for this site, here is the stack I used to build it:
 - Markdown to HTML : MDX-remote library
 - Styling : TailwindCSS
 
-The site was based on the project structure of [leerob.io](leerob.io) site along with tag system implementation based on [Tailwind CSS Next.js Blog Template](https://github.com/timlrx/tailwind-nextjs-starter-blog)
+The site was based on the project structure of [leerob.io](https://leerob.io) site along with tag system implementation based on [Tailwind CSS Next.js Blog Template](https://github.com/timlrx/tailwind-nextjs-starter-blog)
