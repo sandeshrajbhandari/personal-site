@@ -20,12 +20,12 @@ export default function Home({ posts }) {
               Hi, I'm Sandesh. 👋
             </h1>
             <h2 className="text-gray-700 text-xl dark:text-gray-200 mb-4">
-              Engineer, Creator
+              Designer, Developer
             </h2>
             <p className="text-lg dark:text-white">
-              I'm a mechanical engineer, developer, and creator. I write about
-              web dev on my site, build projects, and dabble in 3D design and
-              photography in my free time.
+              I'm a <strong>photographer</strong> and <em>graphic designer</em>{' '}
+              working with 3D art and CGI. Currently, I am learning to code
+              websites and make useful web apps with functional design.
             </p>
           </div>
           <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0">
@@ -47,6 +47,109 @@ export default function Home({ posts }) {
           {posts.map((post) => (
             <BlogPost key={post.title} {...post} />
           ))}
+        </div>
+        <div className="flex flex-col mx-auto w-full max-w-2xl">
+          <h1 className="text-4xl font-extrabold pb-5 dark:text-white">
+            Photography
+          </h1>
+          <section class="overflow-hidden text-gray-700 ">
+            <div class="">
+              <div class="flex flex-wrap -m-1 md:-m-2">
+                <div class="flex flex-wrap w-1/2">
+                  <div class="w-full p-1 md:p-2">
+                    <img
+                      alt="gallery"
+                      class="block object-cover object-center w-full h-full rounded-lg"
+                      src="https://i.imgur.com/DLvisXX.jpg"
+                    />
+                  </div>
+                </div>
+                <div class="flex flex-wrap w-1/2">
+                  <div class="w-full p-1 md:p-2">
+                    <img
+                      alt="gallery"
+                      class="block object-cover object-center w-full h-full rounded-lg"
+                      src="https://i.imgur.com/QwbSY4x.jpg"
+                    />
+                  </div>
+                </div>
+                <div class="flex flex-wrap w-1/2">
+                  <div class="w-full p-1 md:p-2">
+                    <img
+                      alt="gallery"
+                      class="block object-cover object-center w-full h-full rounded-lg"
+                      src="https://i.imgur.com/11Hanbs.jpg"
+                    />
+                  </div>
+                </div>
+                <div class="flex flex-wrap w-1/2">
+                  <div class="w-full p-1 md:p-2">
+                    <img
+                      alt="gallery"
+                      class="block object-cover object-center w-full h-full rounded-lg"
+                      src="https://i.imgur.com/88H0TBw.jpg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <h1 className="text-4xl font-extrabold pt-4 pb-5 dark:text-white">
+            3D Design
+          </h1>
+          <section class="overflow-hidden pb-4 text-gray-700 ">
+            <div class="">
+              <div class="flex flex-wrap -m-1 md:-m-2">
+                <div class="flex flex-wrap w-1/3">
+                  <div class="w-full p-1 md:p-2">
+                    <img
+                      alt="gallery"
+                      class="block object-cover object-center w-full h-full rounded-lg"
+                      src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/a3789e126162197.6129bed3874f3.png"
+                    />
+                  </div>
+                </div>
+                <div class="flex flex-wrap w-1/3">
+                  <div class="w-full p-1 md:p-2">
+                    <img
+                      alt="gallery"
+                      class="block object-cover object-center w-full h-full rounded-lg"
+                      src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/41afe9126162197.6127a8498950e.png"
+                    />
+                  </div>
+                </div>
+                <div class="flex flex-wrap w-1/3">
+                  <div class="w-full p-1 md:p-2">
+                    <img
+                      alt="gallery"
+                      class="block object-cover object-center w-full h-full rounded-lg"
+                      src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/95c7a2126162197.6127a8498a637.png"
+                    />
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap w-1/3">
+                  <div class="w-full p-1 md:p-2">
+                    <img
+                      alt="gallery"
+                      class="block object-cover object-center w-full h-full rounded-lg"
+                      src="https://i.imgur.com/KuTDvUx.jpg"
+                    />
+                  </div>
+                </div>
+                <div class="flex flex-wrap w-1/3">
+                  <div class="w-full p-1 md:p-2">
+                    <img
+                      alt="gallery"
+                      class="block object-cover object-center w-full h-full rounded-lg"
+                      src="https://i.imgur.com/18vJHO6.jpg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </Container>
