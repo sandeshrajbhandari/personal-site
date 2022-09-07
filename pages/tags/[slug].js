@@ -1,0 +1,154 @@
+import { useState } from 'react';
+import { format, parseISO, add } from 'date-fns';
+import Container from '../../components/Container';
+import BlogPost from '../../components/BlogPost';
+import { getAllPosts } from '../../lib/data';
+import { getAllTags } from '../../lib/tags';
+import kebabCase from '../../lib/utils/kebabCase';
+//edited from blog.js with filtered for tag.
+export default function Tag({ posts, tagName }) {
+  const [searchValue, setSearchValue] = useState('');
+  const filteredBlogPosts = posts.filter((post) =>
+    post.title.toLowerCase().includes(searchValue.toLowerCase())
+  );
+
+  return (
+    <Container title="Article Tags" description="Posts with tags custom">
+      <div className="flex flex-col items-start justify-center w-full customMaxWidth mx-auto mb-16">
+        <h1>{tagName}</h1>
+        {/* search bar START */}
+        <div className="relative w-full mb-4">
+          <input
+            aria-label="Search articles"
+            type="text"
+            onChange={(e) => setSearchValue(e.target.value)}
+            placeholder="Search articles"
+            className="block w-full px-4 py-2 text-gray-900 bg-white border border-gray-200 rounded-md dark:border-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-gray-100"
+          />
+          <svg
+            className="absolute w-5 h-5 text-gray-400 right-3 top-3 dark:text-gray-300"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+        </div>
+        {/* Search Bar END */}
+        {/* ------------------------------------------------------------------- */}
+        {/* {!searchValue && (
+          <>
+            <h3 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white">
+              Most Popular
+            </h3>
+            <BlogPost
+              title="Rust Is The Future of JavaScript Infrastructure"
+              summary="Why is Rust being used to replace parts of the JavaScript web ecosystem like minification (Terser), transpilation (Babel), formatting (Prettier), bundling (webpack), linting (ESLint), and more?"
+              slug="rust"
+            />
+            <BlogPost
+              title="Everything I Know About Style Guides, Design Systems, and Component Libraries"
+              summary="A deep-dive on everything I've learned in the past year building style guides, design systems, component libraries, and their best practices."
+              slug="style-guides-component-libraries-design-systems"
+            />
+            <BlogPost
+              title="Creating a Monorepo with Lerna & Yarn Workspaces"
+              summary="In this guide, you will learn how to create a Monorepo to manage multiple packages with a shared build, test, and release process."
+              slug="monorepo-lerna-yarn-workspaces"
+            />
+          </>
+        )} */}
+        <h3 className="mt-4 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white">
+          All Posts
+        </h3>
+        {!filteredBlogPosts.length && (
+          <p className="mb-4 text-gray-600 dark:text-gray-400">
+            No posts found.
+          </p>
+        )}
+        {filteredBlogPosts.map((post) => (
+          <BlogPost key={post.title} {...post} />
+        ))}
+      </div>
+    </Container>
+  );
+}
+
+export function getStaticProps(context) {
+  const { params } = context; //destructure
+  const allPosts = getAllPosts();
+  //const allTagPosts = allPosts.find((item) => item.slug === params.slug);
+  // allPosts.map((post)=> console.log(post.data.tags))
+  const allTagPosts = allPosts.filter((post) => {
+    const formattedTagList = post.data.tags.map((tag) => kebabCase(tag));
+    return formattedTagList.includes(params.slug);
+  });
+  // allPosts.map((post) =>
+  // {console.log(post.data.tags);
+  //   console.log(params.slug);
+  //   console.log(kebabCase(params.slug))
+  // console.log(post.data.tags.includes(kebabCase(params.slug)))}
+  //false and didn't work due to next-js in params.slug and "next js" in post.data.tags array
+  //);
+
+  const sortedPosts = allTagPosts.sort(
+    (a, b) => Number(new Date(b.data.date)) - Number(new Date(a.data.date))
+  );
+  return {
+    props: {
+      posts: sortedPosts.map(({ data, content, slug }) => ({
+        ...data,
+        date: data.date,
+        content,
+        slug
+      })),
+      tagName: params.slug
+    }
+  };
+}
+// export async function getStaticProps(context) {
+//     const { params } = context; //destructure
+//     const allPosts = getAllPosts();
+//     const { data, content } = allPosts.find((item) => item.slug === params.slug);
+
+//     const mdxSource = await serialize(content);
+//     return {
+//       //props: blogPosts.find((item) => item.slug===params.slug), // will be passed to the page component as props
+//       props: {
+//         posts: sortedPosts.map(({ data, content, slug }) => ({
+//           ...data,
+//           date: data.date,
+//           content,
+//           slug
+//         }))
+//       }
+//     };
+//   }
+// props: blogPosts.find...... returns a blog object as prop for slug.js component.
+//it destrustures it to get title, date, content and show it.
+
+export async function getStaticPaths() {
+  // const allPosts = getAllPosts();
+  // console.log(allPosts);
+  const tagObj = await getAllTags('blog');
+  const tags = Object.keys(tagObj);
+  return {
+    //   paths: [
+    //     { params: { ... } }
+    //   ],
+    paths: tags.map((tagName) => ({
+      //gives an array of object with params key.
+      params: {
+        slug: tagName
+      }
+    })),
+    fallback: false // false or 'blocking'
+  };
+  //console.log(JSON.stringify(foo,null,' '));
+}
