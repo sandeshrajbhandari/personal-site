@@ -3,10 +3,19 @@
 @tailwind utilities;
 
 @layer base {
+  /* @font-face {
+    font-family: 'Inter';
+    /* src: url(/fonts/ibm-plex-sans-var.woff2) format('woff2'); 
+    src: url('/fonts/Inter-Regular.ttf');
+  } */
+
   @font-face {
     font-family: 'Inter';
     /* src: url(/fonts/ibm-plex-sans-var.woff2) format('woff2'); */
-    src: url('/fonts/Inter-Regular.ttf');
+    src: url('/fonts/Inter-VariableFont_slnt,wght.ttf') format('ttf')
+      tech('variations');
+    font-weight: 100 1000;
+    /* font-stretch: 25% 151%; */
   }
 
   @font-face {

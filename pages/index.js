@@ -12,9 +12,9 @@ import { format, parseISO, add } from 'date-fns';
 export default function Home({ posts }) {
   return (
     <Container>
-      <div className="flex flex-col justify-around items-around customMaxWidth  mx-auto">
+      <div className="flex flex-col justify-around items-around customMaxWidth mx-auto">
         {/* max-w-2xl determines the actual width of the content here. */}
-        <div className="flex flex-col-reverse sm:flex-row justify-between pb-4">
+        <div className="flex flex-col-reverse sm:flex-row justify-between pb-10">
           <div className="flex-1 pr-8">
             <h1 className="font-bold text-4xl text-teal-600 dark:text-white">
               Hi, I'm Sandesh. 👋
@@ -40,7 +40,10 @@ export default function Home({ posts }) {
             />
           </div>
         </div>
-        <div className="flex flex-col mx-auto w-full max-w-2xl">
+
+        {/* {------------------SECTION BREAK------------------*/}
+
+        <div className="flex flex-col customMaxWidth mx-auto w-full max-w-2xl">
           <h1 className="text-4xl font-extrabold pb-5 dark:text-white">
             Latest Articles
           </h1>
