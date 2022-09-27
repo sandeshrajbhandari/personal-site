@@ -1,4 +1,4 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document(props) {
   return (
@@ -6,18 +6,18 @@ export default function Document(props) {
       <Head>
         <link
           rel="preload"
-          href="/fonts/ibm-plex-sans-var.woff2"
+          href="/fonts/Inter-VariableFont_slnt,wght.ttf"
           as="font"
-          type="font/woff2"
+          type="font/ttf"
           crossOrigin="anonymous"
         />
         <link href="/static/favicons/favicon.ico" rel="shortcut icon" />
         <link href="/static/favicons/site.webmanifest" rel="manifest" />
-        <link
+        {/* <link
           rel="preconnect"
           href="https://cdn.usefathom.com"
           crossOrigin=""
-        />
+        /> */}
         <link
           href="/static/favicons/apple-touch-icon.png"
           rel="apple-touch-icon"

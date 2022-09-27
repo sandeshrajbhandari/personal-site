@@ -61,8 +61,7 @@ module.exports = {
               color: theme('colors.gray.300')
             },
             'h1,h2,h3,h4': {
-              color: theme('colors.gray.100'),
-              'scroll-margin-top': spacing[32]
+              color: theme('colors.gray.100')
             },
             hr: { borderColor: theme('colors.gray.700') },
             ol: {
