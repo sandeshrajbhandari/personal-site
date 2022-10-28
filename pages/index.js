@@ -26,7 +26,7 @@ export default function Home({ posts }) {
               web dev on my site, build projects, and dabble in 3D design and
               photography in my free time.
             </p>
-            <button class="btn btn-blue">Contact Me</button>
+            <button className="btn btn-blue">Contact Me</button>
           </div>
           <div className="w-[200px] sm:w-[200px] relative mb-8 sm:mb-0">
             <ExportedImage

@@ -9,9 +9,7 @@ export default function BlogImg({ src, alt, layout }) {
         width="100%"
         height="100%"
         objectFit="contain"
-        //   className="bg-red-300"
       />
-      //{' '}
     </div>
   );
 }
