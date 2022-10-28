@@ -11,7 +11,7 @@ export default function Home({ posts }) {
     <Container>
       <div className="flex flex-col customMaxWidth w-full mx-auto">
         {/* max-w-2xl determines the actual width of the content here. */}
-        <div className="flex flex-col-reverse sm:flex-row justify-between pt-10 pb-10">
+        <div className="flex flex-col-reverse sm:flex-row justify-between pt-5 pb-10">
           <div className="flex-1 pr-8 space-y-4">
             <div>
               <h2 className="font-bold text-4xl text-teal-600 dark:text-white">
@@ -21,7 +21,7 @@ export default function Home({ posts }) {
                 Engineer, Creator
               </h2>
             </div>
-            <p className="text-md dark:text-white">
+            <p className="text-lg dark:text-white">
               I'm a mechanical engineer, developer, and creator. I write about
               web dev on my site, build projects, and dabble in 3D design and
               photography in my free time.

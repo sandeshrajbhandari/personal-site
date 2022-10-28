@@ -15,7 +15,9 @@ export default function Tag({ posts, tagName }) {
   return (
     <Container title="Article Tags" description="Posts with tags custom">
       <div className="flex flex-col items-start justify-center w-full customMaxWidth mx-auto mb-16">
-        <h1>{tagName}</h1>
+        <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
+          {tagName}
+        </h1>
         {/* search bar START */}
         <div className="relative w-full mb-4">
           <input
@@ -43,7 +45,7 @@ export default function Tag({ posts, tagName }) {
         {/* Search Bar END */}
         {/* ------------------------------------------------------------------- */}
         <h3 className="mt-4 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white">
-          All Posts
+          All Posts with {tagName} tag
         </h3>
         {!filteredBlogPosts.length && (
           <p className="mb-4 text-gray-600 dark:text-gray-400">
