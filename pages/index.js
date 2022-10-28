@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { getAllPosts } from '../lib/data';
 import ExportedImage from 'next-image-export-optimizer';
-
+import Image from 'next/image';
 import Container from '../components/Container';
 import BlogPost from '../components/BlogPost';
 
@@ -12,19 +12,21 @@ export default function Home({ posts }) {
       <div className="flex flex-col customMaxWidth w-full mx-auto">
         {/* max-w-2xl determines the actual width of the content here. */}
         <div className="flex flex-col-reverse sm:flex-row justify-between pt-10 pb-10">
-          <div className="flex-1 pr-8">
-            <h2 className="font-bold text-4xl text-teal-600 dark:text-white mb-2">
-              Hi, I'm Sandesh. 👋
-            </h2>
-            <h2 className="text-gray-700 text-xl dark:text-gray-200 mb-4">
-              Engineer, Creator
-            </h2>
+          <div className="flex-1 pr-8 space-y-4">
+            <div>
+              <h2 className="font-bold text-4xl text-teal-600 dark:text-white">
+                Hi, I'm Sandesh. 👋
+              </h2>
+              <h2 className="text-gray-700 text-xl dark:text-gray-200">
+                Engineer, Creator
+              </h2>
+            </div>
             <p className="text-md dark:text-white">
               I'm a mechanical engineer, developer, and creator. I write about
               web dev on my site, build projects, and dabble in 3D design and
               photography in my free time.
             </p>
-            <button className="py-2 px-4 bg-blue-500">Contact Me</button>
+            <button class="btn btn-blue">Contact Me</button>
           </div>
           <div className="w-[200px] sm:w-[200px] relative mb-8 sm:mb-0">
             <ExportedImage

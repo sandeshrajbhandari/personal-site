@@ -25,6 +25,11 @@ While CVs and resumes are one of the standard way to share your skills and quali
 
 If your are a technically savvy person, invest time in building a site from scratch. However, it can be daunting to get started for non-technical folks, so rely on simple pre-existing tools like Wordpress, Squarespace or Notion to hit the ground running. Again, let me point you to [Digital Gardening for Non-Technical Folks](https://maggieappleton.com/nontechnical-gardening), the article elaborates on the options currently available.
 As for this site, here is the stack I used to build it:
+[image](https://images.footlocker.com/is/image/EBFL2/C7329007)
+<BlogImg alt="Sandesh Rajbhandari"
+unoptimized="true"
+src="https://www.farinasmarketing.com/wp-content/uploads/2019/07/Blogging.png"
+/>
 
 - Hosting : Netlify
 - Front-end : Next.js

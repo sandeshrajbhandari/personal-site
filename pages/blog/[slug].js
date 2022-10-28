@@ -6,7 +6,10 @@ import { format, parseISO, add } from 'date-fns';
 //import { data } from 'autoprefixer';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
+import BlogImg from '../../components/BlogImg';
 import Container from '../../components/Container';
+
+const components = { BlogImg };
 
 export default function Post({ title, date, content, tags }) {
   return (
@@ -49,7 +52,7 @@ export default function Post({ title, date, content, tags }) {
         </div>
 
         <div className="w-full prose dark:prose-dark max-w-none">
-          <MDXRemote {...content} />
+          <MDXRemote {...content} components={components} />
         </div>
       </article>
       <div>

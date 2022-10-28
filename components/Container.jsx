@@ -31,7 +31,7 @@ export default function Container(props) {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
-  // After mounting, we have access to the theme
+  // After mounting, we have access to the theme //after page is loaded set mounted to true.
   useEffect(() => setMounted(true), []);
 
   const { children, ...customMeta } = props;
