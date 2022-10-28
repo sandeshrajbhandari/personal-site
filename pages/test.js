@@ -32,9 +32,9 @@ export default function CardsStacked() {
       {/* 1. Card - Stacked END */}
       <div className="w-full bg-blue-500">Divider</div>
       {/* 2. Card - Horizontal */}
-      <div class="max-w-sm w-full lg:max-w-full lg:flex ">
+      <div className="max-w-sm w-full lg:max-w-full lg:flex ">
         <div
-          class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden bg-red-400"
+          className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden bg-red-400"
           //   style={{ backgroundImage: url('/team_4.jpg') }}
           title="Woman holding a mug"
         >
@@ -45,7 +45,7 @@ export default function CardsStacked() {
           <div className="mb-8">
             <p className="flex items-center text-sm text-gray-600">
               <svg
-                class="fill-current text-gray-500 w-3 h-3 mr-2"
+                className="fill-current text-gray-500 w-3 h-3 mr-2"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >
