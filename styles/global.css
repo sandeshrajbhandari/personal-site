@@ -62,7 +62,7 @@ h3 {
 }
 
 /* https://seek-oss.github.io/capsize/ */
-.capsize::before {
+/* .capsize::before {
   content: '';
   margin-bottom: -0.098em;
   display: table;
@@ -72,7 +72,7 @@ h3 {
   content: '';
   margin-top: -0.219em;
   display: table;
-}
+} */
 
 .skip-nav {
   @apply absolute px-4 py-3 transition-transform duration-200 transform -translate-y-12 -left-1/4 focus:top-4 focus:translate-y-3 -top-8;
@@ -170,4 +170,18 @@ pre {
 
 .customMaxWidth {
   @apply max-w-3xl;
+}
+
+.btn {
+  @apply font-bold py-2 px-4 rounded;
+}
+.btn-blue {
+  @apply bg-blue-500 text-white;
+}
+.btn-blue:hover {
+  @apply bg-blue-700;
+}
+
+.prose {
+  @apply text-lg;
 }
