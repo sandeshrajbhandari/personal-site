@@ -8,8 +8,9 @@ import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 import BlogImg from '../../components/BlogImg';
 import Container from '../../components/Container';
+import rehypeHighlight from 'rehype-highlight';
 
-const components = { BlogImg };
+const components = { img: BlogImg, BlogImg };
 
 export default function Post({ title, date, content, tags }) {
   return (
@@ -21,6 +22,12 @@ export default function Post({ title, date, content, tags }) {
       date={new Date(date).toISOString()}
       type="article"
     >
+      {/* uncomment below to get code syntax highlighting  */}
+      {/* <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css"
+      ></link> */}
+
       <article className="flex flex-col items-start justify-center w-full customMaxWidth mx-auto mb-16">
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
           {title}
@@ -67,7 +74,9 @@ export async function getStaticProps(context) {
   const { params } = context; //destructure
   const allPosts = getAllPosts();
   const { data, content } = allPosts.find((item) => item.slug === params.slug);
-  const mdxSource = await serialize(content);
+  const mdxSource = await serialize(content, {
+    mdxOptions: { rehypePlugins: [rehypeHighlight] }
+  });
   return {
     //props: blogPosts.find((item) => item.slug===params.slug), // will be passed to the page component as props
     props: {
