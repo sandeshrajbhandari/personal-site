@@ -12,9 +12,8 @@
   @font-face {
     font-family: 'Inter';
     /* src: url(/fonts/ibm-plex-sans-var.woff2) format('woff2'); */
-    src: url('/fonts/Inter-VariableFont_slnt,wght.ttf') format('ttf')
-      tech('variations');
-    font-weight: 100 1000;
+    src: url('/fonts/Inter-VariableFont_slnt,wght.ttf');
+    /* font-weight: 100 1000; */
     font-display: fallback;
     /* font-stretch: 25% 151%; */
   }
@@ -23,6 +22,7 @@
     font-family: 'TT Ramillas';
     /* src: url(/fonts/ibm-plex-sans-var.woff2) format('woff2'); */
     src: url('/fonts/TTRamillas-Bold.otf');
+    font-display: fallback;
   }
 }
 
@@ -46,6 +46,7 @@ a {
 html {
   min-width: 360px;
   scroll-behavior: smooth;
+  @apply font-sans;
 }
 
 #__next {
@@ -124,10 +125,10 @@ h3 {
   @apply text-gray-800 dark:text-gray-200 px-1 py-0.5 border border-gray-100 dark:border-gray-800 rounded-lg bg-gray-100 dark:bg-gray-900;
 }
 
-.prose pre code {
+/* .prose pre code {
   @apply text-gray-800 dark:text-gray-200 p-0;
   border: initial;
-}
+} */
 
 .prose img {
   /* Don't apply styles to next/image */
@@ -140,10 +141,10 @@ h3 {
   margin-bottom: 1.25em !important;
 }
 
-code[class*='language-'],
+/* code[class*='language-'],
 pre[class*='language-'] {
   @apply text-gray-800 dark:text-gray-50;
-}
+} */
 
 pre::-webkit-scrollbar {
   display: none;

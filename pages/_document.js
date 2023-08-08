@@ -9,7 +9,7 @@ export default function Document(props) {
           href="/fonts/Inter-VariableFont_slnt,wght.ttf"
           as="font"
           type="font/ttf"
-          crossOrigin="anonymous"
+          crossOrigin=""
         />
         <link href="/static/favicons/favicon.ico" rel="shortcut icon" />
         <link href="/static/favicons/site.webmanifest" rel="manifest" />

@@ -13,6 +13,12 @@ import rehypeHighlight from 'rehype-highlight';
 const components = { img: BlogImg, BlogImg };
 
 export default function Post({ title, date, content, tags }) {
+  const options = {
+    mdxOptions: {
+        remarkPlugins: [],
+        rehypePlugins: [rehypeHighlight],
+    }
+  }
   return (
     <Container
       title={`${title} – Sandesh Rajbhandari`}
@@ -59,7 +65,7 @@ export default function Post({ title, date, content, tags }) {
         </div>
 
         <div className="w-full prose dark:prose-dark max-w-none">
-          <MDXRemote {...content} components={components} />
+          <MDXRemote {...content} components={components} options={options} />
         </div>
       </article>
       <div>

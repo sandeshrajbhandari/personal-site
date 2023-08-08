@@ -35,6 +35,7 @@ export default function Home({ posts }) {
               width={400}
               //public folder
               unoptimized="true"
+            
               src="/avatar.webp"
               className="rounded-full filter grayscale"
             />

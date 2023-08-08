@@ -1,4 +1,5 @@
 import '../styles/global.css';
+import "../styles/highlight-js/a11y-light.min.css"
 import Link from 'next/link';
 import { ThemeProvider } from 'next-themes';
 import { SessionProvider } from 'next-auth/react';
