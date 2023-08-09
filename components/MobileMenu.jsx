@@ -6,6 +6,10 @@ import styles from '../styles/mobile-menu.module.css';
 
 export default function MobileMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMenuMounted = isMenuOpen
+  const isMenuRendered = isMenuOpen
+  // replace isMenuMounted and isMenuRendered in future, this is just a quick fix.
+  // need to do this cause I removed useDelayedRender here.
   // const { mounted: isMenuMounted, rendered: isMenuRendered } = useDelayedRender(
   //   isMenuOpen,
   //   {
