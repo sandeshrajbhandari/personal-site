@@ -6,8 +6,7 @@ module.exports = {
     nextImageExportOptimizer: {
       imageFolderPath: 'public',
       exportFolderPath: 'out',
-      quality: 75,
-      nextImageExportOptimizer_storePicturesInWEBP: true,
+      quality: 75
     },
     domains: [
       'i.scdn.co', // Spotify Album Art
@@ -16,7 +15,7 @@ module.exports = {
   },
 
   env: {
-    storePicturesInWEBP: true,
+    storePicturesInWEBP: false,
     generateAndUseBlurImages: true
   },
 
