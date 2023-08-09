@@ -32,8 +32,8 @@ export default function Tweets({ tweets }) {
         {/* {tweets.map((tweet) => (
           <Tweet key={tweet.id} {...tweet} />
         ))} */}
-        {tweetIds.map(id=> (
-        <blockquote className="twitter-tweet text-sm">
+        {tweetIds.map((id,i)=> (
+        <blockquote key={i} className="twitter-tweet text-sm">
           <a href={`https://twitter.com/x/status/${id}`}></a> 
         </blockquote>
       ))}
