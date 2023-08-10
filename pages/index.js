@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { getAllPosts } from '../lib/data';
 import ExportedImage from 'next-image-export-optimizer';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Container from '../components/Container';
 import BlogPost from '../components/BlogPost';
 
@@ -35,7 +35,6 @@ export default function Home({ posts }) {
               width={400}
               //public folder
               unoptimized="true"
-            
               src="/avatar.webp"
               className="rounded-full filter grayscale"
             />

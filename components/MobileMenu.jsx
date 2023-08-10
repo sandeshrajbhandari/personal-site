@@ -5,123 +5,122 @@ import { useState, useEffect } from 'react';
 import styles from '../styles/mobile-menu.module.css';
 
 export default function MobileMenu() {
-  // const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const isMenuMounted = isMenuOpen
-  // const isMenuRendered = isMenuOpen
-  // // replace isMenuMounted and isMenuRendered in future, this is just a quick fix.
-  // // need to do this cause I removed useDelayedRender here.
-  // // const { mounted: isMenuMounted, rendered: isMenuRendered } = useDelayedRender(
-  // //   isMenuOpen,
-  // //   {
-  // //     enterDelay: 20,
-  // //     exitDelay: 300
-  // //   }
-  // // );
-
-  // function toggleMenu() {
-  //   if (isMenuOpen) {
-  //     setIsMenuOpen(false);
-  //     document.body.style.overflow = '';
-  //   } else {
-  //     setIsMenuOpen(true);
-  //     document.body.style.overflow = 'hidden';
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMenuMounted = isMenuOpen;
+  const isMenuRendered = isMenuOpen;
+  // replace isMenuMounted and isMenuRendered in future, this is just a quick fix.
+  // need to do this cause I removed useDelayedRender here.
+  // const { mounted: isMenuMounted, rendered: isMenuRendered } = useDelayedRender(
+  //   isMenuOpen,
+  //   {
+  //     enterDelay: 20,
+  //     exitDelay: 300
   //   }
-  // }
-
-  // useEffect(() => {
-  //   return function cleanup() {
-  //     document.body.style.overflow = '';
-  //   };
-  // }, []);
-
-  // return (
-  //   <>
-  //     <button
-  //       className={cn(styles.burger, 'visible md:hidden')}
-  //       aria-label="Toggle menu"
-  //       type="button"
-  //       onClick={toggleMenu}
-  //     >
-  //       <MenuIcon data-hide={isMenuOpen} />
-  //       <CrossIcon data-hide={!isMenuOpen} />
-  //     </button>
-  //     {isMenuMounted && (
-  //       <ul
-  //         className={cn(
-  //           styles.menu,
-  //           'flex flex-col absolute bg-gray-100 dark:bg-gray-900',
-  //           isMenuRendered && styles.menuRendered
-  //         )}
-  //       >
-  //         <li
-  //           className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-  //           style={{ transitionDelay: '150ms' }}
-  //         >
-  //           <Link href="/">
-  //             <a className="flex w-auto pb-4">Home</a>
-  //           </Link>
-  //         </li>
-  //         <li
-  //           className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-  //           style={{ transitionDelay: '175ms' }}
-  //         >
-  //           <Link href="/guestbook">
-  //             <a className="flex w-auto pb-4">Guestbook</a>
-  //           </Link>
-  //         </li>
-  //         <li
-  //           className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-  //           style={{ transitionDelay: '200ms' }}
-  //         >
-  //           <Link href="/dashboard">
-  //             <a className="flex w-auto pb-4">Dashboard</a>
-  //           </Link>
-  //         </li>
-  //         <li
-  //           className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-  //           style={{ transitionDelay: '250ms' }}
-  //         >
-  //           <Link href="/blog">
-  //             <a className="flex w-auto pb-4">Blog</a>
-  //           </Link>
-  //         </li>
-  //         <li
-  //           className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-  //           style={{ transitionDelay: '275ms' }}
-  //         >
-  //           <Link href="/snippets">
-  //             <a className="flex w-auto pb-4">Snippets</a>
-  //           </Link>
-  //         </li>
-  //         <li
-  //           className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-  //           style={{ transitionDelay: '300ms' }}
-  //         >
-  //           <Link href="/newsletter">
-  //             <a className="flex w-auto pb-4">Newsletter</a>
-  //           </Link>
-  //         </li>
-  //         <li
-  //           className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-  //           style={{ transitionDelay: '325ms' }}
-  //         >
-  //           <Link href="/tweets">
-  //             <a className="flex w-auto pb-4">Tweets</a>
-  //           </Link>
-  //         </li>
-  //         <li
-  //           className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-  //           style={{ transitionDelay: '350ms' }}
-  //         >
-  //           <Link href="/uses">
-  //             <a className="flex w-auto pb-4">Uses</a>
-  //           </Link>
-  //         </li>
-  //       </ul>
-  //     )}
-  //   </>
   // );
-  return ("")
+
+  function toggleMenu() {
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+      document.body.style.overflow = '';
+    } else {
+      setIsMenuOpen(true);
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  useEffect(() => {
+    return function cleanup() {
+      document.body.style.overflow = '';
+    };
+  }, []);
+
+  return (
+    <>
+      <button
+        className={cn(styles.burger, 'visible md:hidden')}
+        aria-label="Toggle menu"
+        type="button"
+        onClick={toggleMenu}
+      >
+        <MenuIcon data-hide={isMenuOpen} />
+        <CrossIcon data-hide={!isMenuOpen} />
+      </button>
+      {isMenuMounted && (
+        <ul
+          className={cn(
+            styles.menu,
+            'flex flex-col absolute bg-gray-100 dark:bg-gray-900',
+            isMenuRendered && styles.menuRendered
+          )}
+        >
+          <li
+            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            style={{ transitionDelay: '150ms' }}
+          >
+            <Link href="/">
+              <a className="flex w-auto pb-4">Home</a>
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            style={{ transitionDelay: '175ms' }}
+          >
+            <Link href="/guestbook">
+              <a className="flex w-auto pb-4">Guestbook</a>
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            style={{ transitionDelay: '200ms' }}
+          >
+            <Link href="/dashboard">
+              <a className="flex w-auto pb-4">Dashboard</a>
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            style={{ transitionDelay: '250ms' }}
+          >
+            <Link href="/blog">
+              <a className="flex w-auto pb-4">Blog</a>
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            style={{ transitionDelay: '275ms' }}
+          >
+            <Link href="/snippets">
+              <a className="flex w-auto pb-4">Snippets</a>
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            style={{ transitionDelay: '300ms' }}
+          >
+            <Link href="/newsletter">
+              <a className="flex w-auto pb-4">Newsletter</a>
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            style={{ transitionDelay: '325ms' }}
+          >
+            <Link href="/tweets">
+              <a className="flex w-auto pb-4">Tweets</a>
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+            style={{ transitionDelay: '350ms' }}
+          >
+            <Link href="/uses">
+              <a className="flex w-auto pb-4">Uses</a>
+            </Link>
+          </li>
+        </ul>
+      )}
+    </>
+  );
 }
 
 function MenuIcon(props) {
