@@ -9,13 +9,13 @@ export default function BlogPost({ slug, title, date }) {
     //   >
     //     <div>
     //       <Link href={`/blog/${slug}`}>
-    //         <a className="font-bold">{title}</a>
+    //         <div className="font-bold">{title}</div>
     //       </Link>
     //     </div>
     //     <div>{format(parseISO(date), 'MMMM do, uuu')}</div>
     //   </div>
     <Link href={`/blog/${slug}`}>
-      <a className="flex flex-col w-full mb-8 rounded p-3 shadow-md">
+      <div className="flex flex-col w-full mb-8 rounded p-3 shadow-md">
         {/* <div className="flex flex-col justify-between md:flex-row"> */}
 
         <h4 className="w-full mb-2 text-lg font-semibold text-gray-900 md:text-xl dark:text-gray-100">
@@ -29,7 +29,7 @@ export default function BlogPost({ slug, title, date }) {
           {format(parseISO(date), 'MMMM do, uuu')}
         </div>
         {/* <p className="text-gray-600 dark:text-gray-400">{summary}</p> */}
-      </a>
+      </div>
     </Link>
   );
 }

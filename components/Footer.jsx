@@ -1,14 +1,14 @@
 import Link from 'next/link';
 
 const ExternalLink = ({ href, children }) => (
-  <a
+  <div
     className="text-gray-500 hover:text-gray-600 transition"
     target="_blank"
     rel="noopener noreferrer"
     href={href}
   >
     {children}
-  </a>
+  </div>
 );
 
 export default function Footer() {
@@ -19,12 +19,12 @@ export default function Footer() {
       <div className="w-full max-w-2xl grid grid-cols-1 gap-4 pb-16 sm:grid-cols-3">
         <div className="flex flex-col space-y-4 items-center">
           <Link href="/">
-            <a className="text-gray-500 hover:text-gray-600 transition">Home</a>
+            <div className="text-gray-500 hover:text-gray-600 transition">Home</div>
           </Link>
           <Link href="/about">
-            <a className="text-gray-500 hover:text-gray-600 transition">
+            <div className="text-gray-500 hover:text-gray-600 transition">
               About
-            </a>
+            </div>
           </Link>
         </div>
         {/* next-column */}
@@ -39,14 +39,14 @@ export default function Footer() {
         </div>
         <div className="flex flex-col space-y-4 items-center">
           <Link href="/tweets">
-            <a className="text-gray-500 hover:text-gray-600 transition">
+            <div className="text-gray-500 hover:text-gray-600 transition">
               Tweets(to-do)
-            </a>
+            </div>
           </Link>
           <Link href="/stack">
-            <a className="text-gray-500 hover:text-gray-600 transition">
+            <div className="text-gray-500 hover:text-gray-600 transition">
               My Stack
-            </a>
+            </div>
           </Link>
         </div>
       </div>

@@ -68,9 +68,9 @@ export default function Post({ title, date, content, tags }) {
           <MDXRemote {...content} components={components} options={options} />
         </div>
       </article>
-      <div>
+      {/* <div>
         <div>{format(parseISO(date), 'MMMM do, uuu')}</div>
-      </div>
+      </div> */}
       {/* //here isthe hydrated content */}
     </Container>
   );

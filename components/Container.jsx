@@ -14,7 +14,7 @@ function NavItem({ href, text }) {
 
   return (
     <Link href={href}>
-      <a
+      <div
         className={cn(
           isActive
             ? 'font-semibold text-gray-800 dark:text-gray-200'
@@ -23,7 +23,7 @@ function NavItem({ href, text }) {
         )}
       >
         <span className="capsize">{text}</span>
-      </a>
+      </div>
     </Link>
   );
 }
@@ -75,9 +75,9 @@ export default function Container(props) {
       {/* nav div */}
       <div className="flex flex-col justify-center px-8 ">
         <nav className="flex items-center justify-between w-full relative customMaxWidth text-lg border-gray-200 dark:border-gray-700 mx-auto pt-2 pb-2 text-gray-900 bg-gray-50  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
-          <a href="#skip" className="skip-nav">
+          <div href="#skip" className="skip-nav">
             Skip to content
-          </a>
+          </div>
           <div className="ml-[-0.60rem]">
             <MobileMenu />
             <NavItem href="/" text="Home" />
