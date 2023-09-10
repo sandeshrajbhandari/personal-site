@@ -26,7 +26,21 @@ export default function Home({ posts }) {
               web dev on my site, build projects, and dabble in 3D design and
               photography in my free time.
             </p>
-            <button className="btn btn-blue">Contact Me</button>
+            <div className="flex gap-2">
+              <button className="btn bg-teal-600 text-white">
+                <Link
+                  href="mailto:sandeshrb87@gmail.com"
+                  className="text-white"
+                >
+                  Contact Me
+                </Link>
+              </button>
+              <button className="btn bg-teal-600 text-white">
+                <Link href="/portfolio" className="text-white">
+                  Portfolio
+                </Link>
+              </button>
+            </div>
           </div>
           <div className="w-[200px] sm:w-[200px] relative mb-8 sm:mb-0">
             <ExportedImage
@@ -76,7 +90,7 @@ export default function Home({ posts }) {
 // }
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts();
+  const allPosts = getAllPosts().filter((post) => !post.data.draft);
   console.log(allPosts[0].data);
   const sortedPosts = allPosts.sort(
     (a, b) => Number(new Date(b.data.date)) - Number(new Date(a.data.date))

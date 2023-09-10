@@ -2,7 +2,7 @@
 title: How I use Obsidian and Anki to remember things
 date: '2022-05-21'
 tags: ['anki', 'digital-garden', 'workflow']
-draft: true
+draft: False
 summary: 'Anki is a powerful learning tool that uses spaced-repitition to remeber things long term. Using default Anki interface to create flashcards is a hassle, so I use Obsidian to create question answers in bulk and transfer them to Anki in one click using a powerful community plugin.'
 ---
 

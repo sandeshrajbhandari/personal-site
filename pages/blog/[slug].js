@@ -15,10 +15,10 @@ const components = { img: BlogImg, BlogImg };
 export default function Post({ title, date, content, tags }) {
   const options = {
     mdxOptions: {
-        remarkPlugins: [],
-        rehypePlugins: [rehypeHighlight],
+      remarkPlugins: [],
+      rehypePlugins: [rehypeHighlight]
     }
-  }
+  };
   return (
     <Container
       title={`${title} – Sandesh Rajbhandari`}
@@ -79,6 +79,8 @@ export default function Post({ title, date, content, tags }) {
 export async function getStaticProps(context) {
   const { params } = context; //destructure
   const allPosts = getAllPosts();
+  // const allPosts = getAllPosts().filter((item) => item.draft);
+  console.log(allPosts.type);
   const { data, content } = allPosts.find((item) => item.slug === params.slug);
   const mdxSource = await serialize(content, {
     mdxOptions: { rehypePlugins: [rehypeHighlight] }

@@ -78,7 +78,7 @@ export default function Container(props) {
           <div href="#skip" className="skip-nav">
             Skip to content
           </div>
-          <div className="ml-[-0.60rem]">
+          <div>
             <MobileMenu />
             <NavItem href="/" text="Home" />
             {/* <NavItem href="/guestbook" text="Guestbook" />

@@ -71,7 +71,8 @@ export default function Blog({ posts }) {
 }
 
 export function getStaticProps() {
-  const allPosts = getAllPosts();
+  const allPosts = getAllPosts().filter((post) => !post.data.draft);
+  console.log(allPosts.map((post) => post.data.date)); //dev print statement
   const sortedPosts = allPosts.sort(
     (a, b) => Number(new Date(b.data.date)) - Number(new Date(a.data.date))
   );
