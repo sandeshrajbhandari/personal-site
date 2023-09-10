@@ -84,6 +84,19 @@ export default function About() {
                 </Link>
               </p>
             </div>
+            <div className="bg-gray-200 p-2 rounded">
+              <h3>yt-gpt</h3>
+              <p>
+                A working next.js app to summarize youtube videos using its
+                transcripts. Stack used: Next.js, TailwindCSS, Next-Auth, AI SDK
+                by Vercel
+              </p>
+              <p>
+                <Link href="https://github.com/sandeshrajbhandari/yt-gpt">
+                  https://github.com/sandeshrajbhandari/yt-gpt
+                </Link>
+              </p>
+            </div>
           </div>
         </section>
       </div>

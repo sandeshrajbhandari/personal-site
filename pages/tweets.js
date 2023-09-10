@@ -4,6 +4,7 @@ import { useState } from 'react';
 // import { getTweets } from '../lib/twitter';
 import Script from 'next/script';
 // import data from '../data/tweet-ids.json';
+// migrated tweet-ids.json cause it contained scraped bookmarked tweets of mine. search in local files for it.
 export default function Tweets({ tweets }) {
   // console.log(data.status_ids[0]);
   const tweetIds = [
