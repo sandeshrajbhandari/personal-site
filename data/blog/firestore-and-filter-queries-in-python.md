@@ -1,6 +1,6 @@
 ---
-title: Why you need a personal website - Hello World
-date: '2022-05-21'
+title: Firestore AND filter queries in python
+date: '2024-06-07'
 tags: ["firestore", "nosql", "filter", "google cloud", "firestore-query", "backend"]
 draft: false
 summary: "Learn how to implement substring search and combine filters using OR and AND operations for efficient data retrieval from Firestore. This blog covers code examples, best practices, and workarounds for common challenges when working with Firestore queries in Python, including a lack of global search functionality."
