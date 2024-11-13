@@ -64,7 +64,7 @@ export default function Post({ title, date, content, tags }) {
           </div>
         </div>
 
-        <div className="w-full prose dark:prose-dark max-w-none">
+        <div className="w-full prose dark:prose-dark max-w-none prose-wrap">
           <MDXRemote {...content} components={components} options={options} />
         </div>
       </article>

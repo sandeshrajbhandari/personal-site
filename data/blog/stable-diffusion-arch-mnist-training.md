@@ -559,23 +559,25 @@ Common best practices like turning captions to text embeddings before training c
 
 # Resources
 
-**Primary resources**
+**Diffusion Model Resources**
 
-- class conditioned diffusion model HF tut, MNIST - https://huggingface.co/learn/diffusion-course/en/unit2/3 - part of a diffusion course.
-- Finetuning and Guidance HF - https://huggingface.co/learn/diffusion-course/en/unit2/2#guidance
-- https://github.com/huggingface/diffusers/blob/main/examples/text_to_image/train_text_to_image.py - handy for reference
-- https://wandb.ai/capecape/train_sd/reports/How-To-Train-a-Conditional-Diffusion-Model-From-Scratch--VmlldzoyNzIzNTQ1#initial-checkup:-cifar-10
-- MOST SIMILAR TO my implementation
-  - [MNIST-Diffusion](https://colab.research.google.com/github/st-howard/blog-notebooks/blob/main/MNIST-Diffusion/Diffusion%20Digits%20-%20Generating%20MNIST%20Digits%20from%20noise%20with%20HuggingFace%20Diffusers.ipynb#scrollTo=50233a13)
+### **Tutorials and Guides**
 
-**Secondary Resources**
+- **Class-Conditioned Diffusion Model Tutorial**: [**Hugging Face Tutorial**](https://huggingface.co/learn/diffusion-course/en/unit2/3) - Part of a diffusion course on Hugging Face.
+- **Fine-tuning and Guidance**: [**Hugging Face Tutorial**](https://huggingface.co/learn/diffusion-course/en/unit2/2#guidance) - Fine-tuning and guidance techniques for diffusion models.
+- **MNIST Diffusion Tutorial**: [**Google Colab Notebook**](https://colab.research.google.com/github/st-howard/blog-notebooks/blob/main/MNIST-Diffusion/Diffusion%20Digits%20-%20Generating%20MNIST%20Digits%20from%20noise%20with%20HuggingFace%20Diffusers.ipynb#scrollTo=50233a13) - A hands-on tutorial on generating MNIST digits with Hugging Face Diffusers.
 
-- dump and cifar training repo - https://github.com/tcapelle/Diffusion-Models-pytorchorganization=tcapelle&organization=tcapelle
+### **Code Repositories**
 
-- https://github.com/DrugowitschLab/ML-from-scratch-seminar/tree/master/StableDiffusion
-- https://github.com/cloneofsimo - clonesofsimo has a few handy repos as refernces
+- **Hugging Face Diffusers**: [**GitHub Repository**](https://github.com/huggingface/diffusers/blob/main/examples/text_to_image/train_text_to_image.py) - A handy reference for text-to-image diffusion models.
+- **Training a Conditional Diffusion Model from Scratch**: [**WandB Report**](https://wandb.ai/capecape/train_sd/reports/How-To-Train-a-Conditional-Diffusion-Model-From-Scratch--VmlldzoyNzIzNTQ1#initial-checkup:-cifar-10) - A report on training a conditional diffusion model from scratch.
 
-- zero to hero diffusion - repo of different model architecture and training code. https://github.com/swookey-thinky/mindiffusion/tree/maintab=readme-ov-file
+### **Secondary Resources**
+
+- **Dump and CIFAR Training Repository**: [**GitHub Repository**](https://github.com/tcapelle/Diffusion-Models-pytorchorganization=tcapelle&organization=tcapelle) - A repository containing dump and CIFAR training code.
+- **Stable Diffusion Repository**: [**GitHub Repository**](https://github.com/DrugowitschLab/ML-from-scratch-seminar/master/StableDiffusion) - A repository containing Stable Diffusion code and resources.
+- **Clone of Simo's Repositories**: [**GitHub Repository**](https://github.com/cloneofsimo) - A collection of handy repositories as references.
+- **Zero to Hero Diffusion**: [**GitHub Repository**](https://github.com/swookey-thinky/mindiffusion/tree/maintab=readme-ov-file) - A repository containing different model architectures and training code.
 - this reddit post comment by OnlyJoe3 is quite insightful. For architecture and training speed and costs. https://www.reddit.com/r/StableDiffusion/comments/1581qjk/making_and_training_stable_diffusion_models_from/
 - asked Claude about the learning rate scaling.
 
@@ -589,14 +591,15 @@ Scaling factor: 32 / 2096 ≈ 0.0153
 Scaled learning rate: 1e-4 * 0.0153 ≈ 1.53e-6
 
 ```
+### **Blog Posts and Courses**
 
-- data bricks blog on diffusion training - https://www.databricks.com/blog/stable-diffusion-2
-- https://www.databricks.com/blog/stable-diffusion-2
-- https://johnowhitaker.github.io/tglcourse/dm3.html
-- fastai stable diffusion course notebooks - https://forums.fast.ai/t/practical-deep-learning-for-coders-part-2-github-repo/110774
+- **Databricks Blog**: [**Stable Diffusion 2**](https://www.databricks.com/blog/stable-diffusion-2) - A blog post on Stable Diffusion 2.
+- **Fastai Stable Diffusion Course**: [**Fastai Course Notebooks**](https://forums.fast.ai/t/practical-deep-learning-for-coders-part-2-github-repo/110774) - A course on Stable Diffusion using Fastai.
+- **Lilian Weng's Blog**: [**Diffusion Models**](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/) - A blog post on diffusion models.
+- **Harvard University Course**: [**Stable Diffusion from Scratch**](https://scholar.harvard.edu/binxuw/classes/machine-learning-scratch/materials/stable-diffusion-scratch) - A course on Stable Diffusion from scratch.
+- **Klaviyo Tech Blog**: [**Trying to Understand Stable Diffusion**](https://klaviyo.tech/trying-to-understand-stable-diffusion-ea55eefca798) - A blog post on understanding Stable Diffusion.
 
-- https://lilianweng.github.io/posts/2021-07-11-diffusion-models/
-- https://scholar.harvard.edu/binxuw/classes/machine-learning-scratch/materials/stable-diffusion-scratch
-- https://klaviyo.tech/trying-to-understand-stable-diffusion-ea55eefca798
-- https://github.com/lucidrains/DALLE-pytorch
-- https://github.com/OutofAi/StableFacetab=readme-ov-file
+### **Other Resources**
+
+- **DALLE-pytorch Repository**: [**GitHub Repository**](https://github.com/lucidrains/DALLE-pytorch) - A repository containing DALLE-pytorch code.
+- **StableFacet Repository**: [**GitHub Repository**](https://github.com/OutofAi/StableFacetab=readme-ov-file) - A repository containing StableFacet code.

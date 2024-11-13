@@ -186,3 +186,12 @@ pre {
 .prose {
   @apply text-lg;
 }
+
+.prose-wrap {
+  @apply prose dark:prose-dark max-w-none;
+  /* word-wrap: break-word; */
+  overflow-wrap: break-word;
+  /* word-break: break-word; */
+  /* -webkit-hyphens: auto; ## these wraps were also hyphenating the words
+  hyphens: auto; */
+}
