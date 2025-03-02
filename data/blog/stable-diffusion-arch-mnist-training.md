@@ -591,6 +591,7 @@ Scaling factor: 32 / 2096 ≈ 0.0153
 Scaled learning rate: 1e-4 * 0.0153 ≈ 1.53e-6
 
 ```
+
 ### **Blog Posts and Courses**
 
 - **Databricks Blog**: [**Stable Diffusion 2**](https://www.databricks.com/blog/stable-diffusion-2) - A blog post on Stable Diffusion 2.

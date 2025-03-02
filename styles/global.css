@@ -170,7 +170,7 @@ pre {
 /* ///////////// */
 
 .customMaxWidth {
-  @apply max-w-3xl;
+  @apply md:max-w-5xl sm:max-w-3xl;
 }
 
 .btn {
@@ -185,6 +185,7 @@ pre {
 
 .prose {
   @apply text-lg;
+  @apply text-justify;
 }
 
 .prose-wrap {
@@ -194,4 +195,9 @@ pre {
   /* word-break: break-word; */
   /* -webkit-hyphens: auto; ## these wraps were also hyphenating the words
   hyphens: auto; */
+}
+
+.prose h2,
+.prose h3 {
+  @apply mb-4 mt-10;
 }
