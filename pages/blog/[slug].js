@@ -7,10 +7,16 @@ import { format, parseISO, add } from 'date-fns';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 import BlogImg from '../../components/BlogImg';
+import ImageGrid, { FlexibleImageGrid } from '../../components/ImageGrid';
 import Container from '../../components/Container';
 import rehypeHighlight from 'rehype-highlight';
 
-const components = { img: BlogImg, BlogImg };
+const components = { 
+  img: BlogImg, 
+  BlogImg, 
+  ImageGrid, 
+  FlexibleImageGrid 
+};
 
 export default function Post({ title, date, content, tags }) {
   const options = {
