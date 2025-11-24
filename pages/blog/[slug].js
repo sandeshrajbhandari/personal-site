@@ -9,13 +9,24 @@ import { MDXRemote } from 'next-mdx-remote';
 import BlogImg from '../../components/BlogImg';
 import ImageGrid, { FlexibleImageGrid } from '../../components/ImageGrid';
 import Container from '../../components/Container';
+import Mermaid from '../../components/Mermaid';
 import rehypeHighlight from 'rehype-highlight';
 
-const components = { 
-  img: BlogImg, 
-  BlogImg, 
-  ImageGrid, 
-  FlexibleImageGrid 
+const components = {
+  img: BlogImg,
+  BlogImg,
+  ImageGrid,
+  FlexibleImageGrid,
+  Mermaid,
+  pre: ({ children, ...props }) => {
+    // Check if it's a Mermaid diagram
+    if (children && children.props && children.props.className === 'language-mermaid') {
+      const chart = children.props.children.trim();
+      return <Mermaid chart={chart} />;
+    }
+    // Otherwise render as normal code block
+    return <pre {...props}>{children}</pre>;
+  }
 };
 
 export default function Post({ title, date, content, tags }) {

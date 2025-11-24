@@ -201,3 +201,83 @@ pre {
 .prose h3 {
   @apply mb-4 mt-10;
 }
+
+/* Mermaid Diagram Styling */
+/* Base Mermaid container styling */
+svg[id^="mermaid"] {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mermaid text elements styling */
+.mermaid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+
+/* Mermaid node styling */
+.mermaid .nodeLabel {
+  font-family: inherit !important;
+  font-size: 1rem !important;
+  fill: currentColor !important;
+}
+
+/* Mermaid edge styling */
+.mermaid .edgeLabel {
+  font-family: inherit !important;
+  font-size: 0.875rem !important;
+  fill: currentColor !important;
+}
+
+/* Mermaid cluster styling */
+.mermaid .cluster {
+  fill: rgba(249, 250, 251, 0.8) !important;
+  stroke: #e5e7eb !important;
+}
+
+/* Dark mode Mermaid styling */
+.dark .mermaid .cluster {
+  fill: rgba(17, 24, 39, 0.8) !important;
+  stroke: #374151 !important;
+}
+
+/* Mermaid arrow markers */
+.mermaid .marker {
+  fill: #6b7280 !important;
+}
+
+/* Mermaid links */
+.mermaid .link {
+  stroke: #6b7280 !important;
+  stroke-width: 1.5px !important;
+}
+
+/* Mermaid nodes */
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node polygon {
+  fill: white !important;
+  stroke: #d1d5db !important;
+  stroke-width: 1px !important;
+}
+
+.dark .mermaid .node rect,
+.dark .mermaid .node circle,
+.dark .mermaid .node ellipse,
+.dark .mermaid .node polygon {
+  fill: #1f2937 !important;
+  stroke: #4b5563 !important;
+}
+
+/* Mermaid text */
+.mermaid .node text {
+  fill: #1f2937 !important;
+  font-family: inherit !important;
+}
+
+.dark .mermaid .node text {
+  fill: #f9fafb !important;
+}
