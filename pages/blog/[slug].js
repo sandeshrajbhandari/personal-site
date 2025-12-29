@@ -30,12 +30,6 @@ const components = {
 };
 
 export default function Post({ title, date, content, tags }) {
-  const options = {
-    mdxOptions: {
-      remarkPlugins: [],
-      rehypePlugins: [rehypeHighlight]
-    }
-  };
   return (
     <Container
       title={`${title} – Sandesh Rajbhandari`}
@@ -82,7 +76,7 @@ export default function Post({ title, date, content, tags }) {
         </div>
 
         <div className="w-full prose dark:prose-dark max-w-none prose-wrap">
-          <MDXRemote {...content} components={components} options={options} />
+          <MDXRemote {...content} components={components} />
         </div>
       </article>
       {/* <div>
@@ -100,7 +94,10 @@ export async function getStaticProps(context) {
   console.log(allPosts.type);
   const { data, content } = allPosts.find((item) => item.slug === params.slug);
   const mdxSource = await serialize(content, {
-    mdxOptions: { rehypePlugins: [rehypeHighlight] }
+    mdxOptions: {
+      remarkPlugins: [],
+      rehypePlugins: [[rehypeHighlight, { ignoreMissing: true }]]
+    }
   });
   return {
     //props: blogPosts.find((item) => item.slug===params.slug), // will be passed to the page component as props
