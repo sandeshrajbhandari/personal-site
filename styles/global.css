@@ -204,9 +204,16 @@ pre {
 
 /* Mermaid Diagram Styling */
 /* Base Mermaid container styling */
+
 svg[id^="mermaid"] {
   max-width: 100%;
   height: auto;
+  overflow: visible;
+}
+
+/* Ensure Mermaid SVG can expand beyond viewport if needed */
+.mermaid-container svg {
+  min-width: fit-content;
 }
 
 /* Mermaid text elements styling */
@@ -222,6 +229,21 @@ svg[id^="mermaid"] {
   font-family: inherit !important;
   font-size: 1rem !important;
   fill: currentColor !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+/* Ensure foreignObject text wraps properly */
+.mermaid foreignObject {
+  overflow: visible !important;
+}
+
+.mermaid foreignObject div {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  text-align: center !important;
 }
 
 /* Mermaid edge styling */
@@ -280,4 +302,34 @@ svg[id^="mermaid"] {
 
 .dark .mermaid .node text {
   fill: #f9fafb !important;
+}
+
+/* Ensure all text elements in Mermaid can display fully */
+.mermaid text {
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+/* Handle long text in node labels - ensure they're not clipped */
+.mermaid .nodeLabel,
+.mermaid .edgeLabel,
+.mermaid .label text {
+  overflow: visible !important;
+  white-space: normal !important;
+}
+
+/* For HTML labels (foreignObject), ensure proper wrapping */
+.mermaid-container foreignObject {
+  overflow: visible !important;
+}
+
+.mermaid-container foreignObject > div {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  hyphens: auto !important;
+  max-width: 100% !important;
+  text-align: center !important;
+  padding: 4px !important;
+  box-sizing: border-box !important;
 }

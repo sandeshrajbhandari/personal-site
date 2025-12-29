@@ -20,7 +20,33 @@ export default function Mermaid({ chart, figure, alt }) {
         startOnLoad: false,
         theme: 'default',
         securityLevel: 'loose',
-        fontFamily: 'inherit'
+        fontFamily: 'inherit',
+        // flowchart: {
+        //   useMaxWidth: true,
+        //   htmlLabels: true,
+        //   curve: 'basis'
+        // },
+        // gantt: {
+        //   useMaxWidth: true
+        // },
+        // sequence: {
+        //   useMaxWidth: true
+        // },
+        // class: {
+        //   useMaxWidth: true
+        // },
+        // state: {
+        //   useMaxWidth: true
+        // },
+        // pie: {
+        //   useMaxWidth: true
+        // },
+        // er: {
+        //   useMaxWidth: true
+        // },
+        // journey: {
+        //   useMaxWidth: true
+        // }
       });
 
       try {
@@ -84,7 +110,9 @@ export default function Mermaid({ chart, figure, alt }) {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        minHeight: '100px'
+        minHeight: '100px',
+        // width: '100%',
+        // overflow: 'auto'
       }}
       role="img"
       aria-label={alt || 'Mermaid diagram'}
